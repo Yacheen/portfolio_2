@@ -2,6 +2,7 @@ import React from "react";
 import { Project } from "./Project";
 import audiophileecommerce from "../assets/images/audiophilehero.png";
 import yassincodesimage from "../assets/images/yassincodes1.jpg";
+import fylolandingpage from "../assets/images/fylolandingpageimage.webp";
 export const ProjectsSection = () => {
 	return (
 		<div className="projects">
@@ -40,7 +41,26 @@ export const ProjectsSection = () => {
 							color={"bubblegum-green"}
 							codeLink={false}
 						/>
-						<Project />
+						<Project
+							name={
+								<>
+									Fylo
+									<br />
+									landing page
+								</>
+							}
+							image={fylolandingpage}
+							description={
+								"Created a mobile-first & responsive landing page with animations using mainly CSS flexbox"
+							}
+							projectLink={
+								"https://fylo-landing-page.yassinweb.dev/"
+							}
+							codeLink={
+								"https://github.com/Yacheen/Fylo-landing-page"
+							}
+							color={"bubblegum-blue"}
+						/>
 					</div>
 					<div className="projects-row">
 						<Project />
