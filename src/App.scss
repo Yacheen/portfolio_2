@@ -1,4 +1,4 @@
-//globals
+//globals / defaults
 * {
 	margin: 0;
 	padding: 0;
@@ -14,22 +14,57 @@ a {
 	color: unset;
 	text-decoration: none;
 }
+// body {
+// 	background: hsl(0, 0%, 10%);
+// }
+
+html {
+	color: hsl(0, 0%, 90%);
+}
 
 //variables
-$bubblegum-blue: #92f5ff;
-$bubblegum-pink: #ffaed7;
-$bubblegum-green: #87ffb0;
+//color palette
+$bubblegum-blue: hsl(186, 100%, 69%);
+$bubblegum-pink: hsl(330, 100%, 74%);
+$bubblegum-green: hsl(141, 100%, 66%);
 
-$bublegum-black: hsla(0, 0%, 10%, 0.8);
-$bubblegum-white: hsla(0, 0%, 90%, 0.8);
+$bubblegum-blue-highlighted: hsl(186, 100%, 59%);
+$bubblegum-pink-highlighted: hsl(330, 100%, 64%);
+$bubblegum-green-highlighted: hsl(141, 100%, 56%);
+
+$bubblegum-black: hsla(0, 0%, 10%, 1);
+$bubblegum-white: hsla(0, 0%, 90%, 1);
+
+//darkmode & lightmode
+//darkmode?
+.dark-mode-text {
+	color: hsl(0, 0%, 90%);
+}
+//lightmode?
+.light-mode-text {
+	color: hsl(0, 0%, 10%);
+}
+
+//mixins
+@mixin project-button {
+	width: 9.1rem;
+	height: 3.6rem;
+	cursor: pointer;
+	font-size: 2rem;
+	transition: all ease 0.2s;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 8px 16px 0 rgba(243, 243, 243, 0.2);
+}
 
 //styling done top to bottom
-
 //navbar
 
 .navbar {
 	max-width: 60%;
 	margin: 0 auto;
+	margin-bottom: 4rem;
+
 	.navbar-content {
 		display: flex;
 		justify-content: space-between;
@@ -58,12 +93,158 @@ $bubblegum-white: hsla(0, 0%, 90%, 0.8);
 
 //hero section
 .hero-section {
+	margin-bottom: 12rem;
 	.hero-section-content {
+		max-width: 60%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		.hero-about {
+			> * {
+				margin-bottom: 1.6rem;
+			}
+			h1 {
+				font-size: 5.4rem;
+			}
+			h2 {
+				font-size: 3.8rem;
+			}
+			p {
+				font-size: 2.2rem;
+				max-width: 60%;
+				font-weight: 400;
+			}
 		}
 
 		.hero-yassincodes-project {
+			display: flex;
 			.hero-yassincodes-description {
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-end;
+				margin-right: 2rem;
+				h3 {
+					font-size: 2rem;
+					max-width: 50%;
+				}
+				button {
+					@include project-button;
+					width: 12rem;
+					height: 4rem;
+					margin-right: 2rem;
+					background: $bubblegum-blue;
+					&:hover {
+						background: $bubblegum-blue-highlighted;
+					}
+				}
+			}
+
+			.hero-yassincodes-gif {
+				display: flex;
+				justify-content: flex-end;
+				img {
+					max-width: 320px;
+				}
+			}
+		}
+	}
+}
+
+//projects
+.projects {
+	.projects-content {
+		display: flex;
+		flex-direction: column;
+		max-width: 60%;
+		margin: 0 auto;
+		h2 {
+			font-size: 4rem;
+			text-align: center;
+			margin-bottom: 4rem;
+		}
+
+		.projects-list {
+			display: flex;
+			flex-direction: column;
+			.projects-row {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 4rem;
+			}
+		}
+	}
+}
+
+//each individual project
+//color backgrounds for each project
+.bubblegum-pink {
+	background: linear-gradient(
+		to right bottom,
+		$bubblegum-pink,
+		hsla(0, 0%, 90%, 0.9)
+	);
+	backdrop-filter: blur(20rem);
+}
+
+.bubblegum-blue {
+	background: linear-gradient(
+		to right bottom,
+		$bubblegum-blue,
+		hsla(0, 0%, 90%, 0.9)
+	);
+	backdrop-filter: blur(20rem);
+}
+
+.bubblegum-green {
+	background: linear-gradient(
+		to right bottom,
+		$bubblegum-green,
+		hsla(0, 0%, 90%, 0.9)
+	);
+	backdrop-filter: blur(20rem);
+}
+
+.project {
+	width: 32rem;
+	height: 52rem;
+	border-radius: 0.8rem;
+	color: hsl(0, 0%, 10%);
+	.project-content {
+		max-width: 90%;
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+
+		h3 {
+			font-size: 2.4rem;
+			text-align: center;
+		}
+
+		img {
+			max-width: 100%;
+			border-radius: 4px;
+		}
+
+		p {
+			font-size: 1.8rem;
+			font-weight: bold;
+		}
+
+		.project-buttons {
+			display: flex;
+			justify-content: space-evenly;
+			width: 100%;
+			button {
+				@include project-button;
+				background: hsl(0, 0%, 10%);
+				color: hsl(0, 0%, 90%);
+				&:hover {
+					background: hsl(0, 0%, 20%);
+				}
 			}
 		}
 	}
