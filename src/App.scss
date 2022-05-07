@@ -53,6 +53,17 @@ html[data-theme="dark"] {
 			box-shadow: 0 8px 12px 0 rgba(243, 243, 243, 0.3);
 		}
 	}
+	.contact {
+		.contact-content {
+			.contact-form {
+				div {
+					p {
+						color: hsl(0, 0%, 90%);
+					}
+				}
+			}
+		}
+	}
 }
 
 //globals/defaults/
@@ -397,5 +408,69 @@ a {
 			height: 100%;
 			font-size: 1.6rem;
 		}
+	}
+}
+//contact
+.contact {
+	margin-bottom: 8rem;
+	h2 {
+		text-align: center;
+		font-size: 4rem;
+		margin-bottom: 4rem;
+	}
+	.contact-content {
+		max-width: 60%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.contact-invitation {
+			font-size: 2.4rem;
+			width: 30%;
+		}
+		.contact-form {
+			min-height: 32rem;
+			min-width: 35.2rem;
+			.form-content {
+				display: flex;
+				flex-direction: column;
+				p {
+					font-size: 1.8rem;
+					padding-bottom: 4px;
+					color: hsl(0, 0%, 10%);
+				}
+				
+				.form-name {
+					width: 50%;
+					height: 3.2rem;
+					padding: 6px;
+					margin-bottom: 1.4rem;
+				}
+				.form-email {
+					width: 100%;
+					height: 3.2rem;
+					padding: 6px;
+					margin-bottom: 1.4rem;
+				}
+				textarea {
+					width: 100%;
+					padding: 8px;
+					resize: none;
+					margin-bottom: 2rem;
+				}
+				.form-submit {
+					@include project-button();
+					background: hsl(209, 91%, 47%);
+					color: hsl(0, 0%, 100%);
+					&:hover {
+						background: hsl(209, 91%, 57%);
+						box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+					}
+					box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+				}
+			}
+		}
+
 	}
 }
