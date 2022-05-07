@@ -38,7 +38,7 @@ export const Navbar = () => {
 						color="warning"
 					/>
 				</div>
-				<h2 id="#About">Portfolio</h2>
+				<h2 id="Home">Portfolio</h2>
 
 				<ul className="nav-links">
 					<a href="#Projects">

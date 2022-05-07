@@ -19,9 +19,15 @@ export const HeroSection = () => {
 				<div className="hero-yassincodes-project">
 					<div className="hero-yassincodes-description">
 						<h3>Custom chatroom authenticated via Twitch oAuth</h3>
-						<button data-theme className="shadow">
-							Learn more
-						</button>
+						<a
+							href="https://yassincodes.com/stream"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<button data-theme className="shadow">
+								Learn more
+							</button>
+						</a>
 					</div>
 					<div className="hero-yassincodes-gif">
 						<img src={yassincodesgif} alt="" />
