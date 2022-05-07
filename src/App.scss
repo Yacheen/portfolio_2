@@ -78,6 +78,12 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 		h2 {
 			font-size: 3.2rem;
 		}
+
+		.light-switch {
+			display: flex;
+			align-items: center;
+		}
+
 		.nav-links {
 			display: flex;
 			list-style-type: none;
