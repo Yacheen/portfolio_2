@@ -1,54 +1,55 @@
-//globals / defaults
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Roboto";
-}
-
-html {
-	font-size: 62.5%;
-	color: hsl(0, 0%, 90%);
-	scroll-behavior: smooth;
-}
-
-a {
-	color: unset;
-	text-decoration: none;
-}
-body {
-	background: hsl(0, 0%, 10%);
-}
-
 //variables
 //color palette
 $bubblegum-blue: hsl(186, 100%, 69%);
 $bubblegum-darkBlue: hsl(223, 67%, 55%);
 $bubblegum-pink: hsl(330, 100%, 74%);
 $bubblegum-green: hsl(141, 100%, 66%);
-$bubblegum-hotPink: hsl(320, 100%, 69%);
+$bubblegum-purple: hsl(290, 94%, 69%);
 $bubblegum-yellow: hsl(63, 100%, 69%);
 $bubblegum-orange: hsl(26, 100%, 57%);
-$bubblegum-red: hsl(346, 91%, 26%);
 
 $bubblegum-blue-highlighted: hsl(186, 100%, 59%);
 $bubblegum-pink-highlighted: hsl(330, 100%, 64%);
 $bubblegum-green-highlighted: hsl(141, 100%, 56%);
-$bubblegum-hotPink-highlighted: hsl(320, 100%, 59%);
+$bubblegum-purple-highlighted: hsl(320, 100%, 59%);
 $bubblegum-yellow-highlighted: hsl(63, 100%, 59%);
 
-$bubblegum-black: hsla(0, 0%, 10%, 1);
-$bubblegum-white: hsla(0, 0%, 90%, 1);
+//darkmode & lightmode themes
+$darkmode-text: hsl(0, 0%, 90%);
+$lightmode-text: hsl(0, 0%, 10%);
 
-//darkmode & lightmode
-//darkmode?
-.dark-mode-text {
-	color: hsl(0, 0%, 90%);
+$darkmode-background: hsl(0, 0%, 10%);
+$lightmode-background: hsl(0, 0%, 100%);
+
+//globals / defaults
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto";
 }
-//lightmode?
-.light-mode-text {
-	color: hsl(0, 0%, 10%);
+html {
+	//set globals
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	//light theme initially
+	background: $lightmode-background;
+	color: $lightmode-text;
 }
+
+html[data-theme="dark"] {
+	background: $darkmode-background;
+	color: $darkmode-text;
+}
+
+a {
+	color: unset;
+	text-decoration: none;
+}
+// body {
+// 	background: hsl(0, 0%, 10%);
+// }
 
 //mixins
 @mixin project-button {
@@ -66,11 +67,10 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 //navbar
 
 .navbar {
-	max-width: 60%;
-	margin: 0 auto;
 	margin-bottom: 4rem;
-
 	.navbar-content {
+		max-width: 60%;
+		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -104,7 +104,7 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 
 //hero section
 .hero-section {
-	margin-bottom: 8rem;
+	margin-bottom: 12rem;
 	.hero-section-content {
 		max-width: 60%;
 		margin: 0 auto;
@@ -113,15 +113,15 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 		align-items: center;
 		.hero-about {
 			h1 {
-				font-size: 5.4rem;
-				margin-bottom: 0.2rem;
+				font-size: 6rem;
 			}
 			h2 {
-				font-size: 3.4rem;
+				font-size: 3.8rem;
 				margin-bottom: 4rem;
+				color: rgb(45, 148, 245);
 			}
 			p {
-				font-size: 2.2rem;
+				font-size: 2.6rem;
 				max-width: 60%;
 				font-weight: 400;
 			}
@@ -158,7 +158,7 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 				border: 1px solid hsla(0, 0%, 90%, 0.4);
 				margin-left: 2rem;
 				img {
-					max-height: 400px;
+					max-height: 320px;
 					border-radius: 8px;
 				}
 			}
@@ -181,10 +181,9 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 
 		.projects-list {
 			display: flex;
-			justify-content: center;
+			justify-content: space-between;
 			flex-wrap: wrap;
 		}
-		
 	}
 }
 
@@ -225,10 +224,10 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 	backdrop-filter: blur(20rem);
 }
 
-.bubblegum-hotPink {
+.bubblegum-purple {
 	background: linear-gradient(
 		to right bottom,
-		$bubblegum-hotPink,
+		$bubblegum-purple,
 		hsla(0, 0%, 90%, 0.9)
 	);
 	backdrop-filter: blur(20rem);
@@ -252,9 +251,12 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 	backdrop-filter: blur(20rem);
 }
 .project {
-	width: 30rem;
+	min-width: 30rem;
+	max-width: 30rem;
 	height: 50rem;
 	border-radius: 0.8rem;
+	margin: 28px auto;
+
 	color: hsl(0, 0%, 10%);
 	flex: 0 0 33.3%;
 	.project-content {

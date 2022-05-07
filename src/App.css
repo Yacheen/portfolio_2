@@ -8,8 +8,14 @@
 
 html {
   font-size: 62.5%;
-  color: #e6e6e6;
   scroll-behavior: smooth;
+  background: white;
+  color: #1a1a1a;
+}
+
+html[data-theme="dark"] {
+  background: #1a1a1a;
+  color: #e6e6e6;
 }
 
 a {
@@ -17,25 +23,13 @@ a {
   text-decoration: none;
 }
 
-body {
-  background: #1a1a1a;
-}
-
-.dark-mode-text {
-  color: #e6e6e6;
-}
-
-.light-mode-text {
-  color: #1a1a1a;
-}
-
 .navbar {
-  max-width: 60%;
-  margin: 0 auto;
   margin-bottom: 4rem;
 }
 
 .navbar .navbar-content {
+  max-width: 60%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,7 +78,7 @@ body {
 }
 
 .hero-section {
-  margin-bottom: 8rem;
+  margin-bottom: 12rem;
 }
 
 .hero-section .hero-section-content {
@@ -102,17 +96,17 @@ body {
 }
 
 .hero-section .hero-section-content .hero-about h1 {
-  font-size: 5.4rem;
-  margin-bottom: 0.2rem;
+  font-size: 6rem;
 }
 
 .hero-section .hero-section-content .hero-about h2 {
-  font-size: 3.4rem;
+  font-size: 3.8rem;
   margin-bottom: 4rem;
+  color: #2d94f5;
 }
 
 .hero-section .hero-section-content .hero-about p {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   max-width: 60%;
   font-weight: 400;
 }
@@ -179,7 +173,7 @@ body {
 }
 
 .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-gif img {
-  max-height: 400px;
+  max-height: 320px;
   border-radius: 8px;
 }
 
@@ -205,26 +199,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.projects .projects-content .projects-list .projects-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 4rem;
-}
-
-.projects .projects-content .projects-list .projects-row:nth-child(3) {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .bubblegum-pink {
@@ -255,9 +234,9 @@ body {
           backdrop-filter: blur(20rem);
 }
 
-.bubblegum-hotPink {
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff61ca), to(rgba(230, 230, 230, 0.9)));
-  background: linear-gradient(to right bottom, #ff61ca, rgba(230, 230, 230, 0.9));
+.bubblegum-purple {
+  background: -webkit-gradient(linear, left top, right bottom, from(#e166fa), to(rgba(230, 230, 230, 0.9)));
+  background: linear-gradient(to right bottom, #e166fa, rgba(230, 230, 230, 0.9));
   -webkit-backdrop-filter: blur(20rem);
           backdrop-filter: blur(20rem);
 }
@@ -277,10 +256,15 @@ body {
 }
 
 .project {
-  width: 30rem;
+  min-width: 30rem;
+  max-width: 30rem;
   height: 50rem;
   border-radius: 0.8rem;
+  margin: 28px auto;
   color: #1a1a1a;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.3%;
+          flex: 0 0 33.3%;
 }
 
 .project .project-content {

@@ -1,27 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Switch from "@mui/material/Switch";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-
+import useLocalStorage from "../hooks/useLocalStorage";
 export const Navbar = () => {
-	const [darkMode, setDarkMode] = useState(false);
+	//darkmode state with classes
+	const [darkmode, setDarkmode] = useLocalStorage("theme", false);
+	useEffect(() => {
+		switch (darkmode) {
+			case false:
+				document.documentElement.setAttribute("data-theme", "light");
+				break;
+
+			case true:
+				document.documentElement.setAttribute("data-theme", "dark");
+				break;
+			default:
+				break;
+		}
+	}, [darkmode, setDarkmode]);
+
 	return (
 		<div className="navbar">
 			<div className="navbar-content">
-				<h2 id="#About">Yassin's Portfolio</h2>
+				<h2 id="#About">Portfolio</h2>
 				<div className="light-switch">
 					<Switch
-						value="yo"
-						onClick={() => setDarkMode(!darkMode)}
-						label="Dis The end"
-						labelPlacement="end"
-						color="secondary"
+						defaultChecked={darkmode ? true : false}
+						onClick={() => setDarkmode(!darkmode)}
+						color="warning"
 					/>
 					<p>
-						{darkMode ? (
-							<LightModeOutlinedIcon fontSize="large" />
-						) : (
+						{darkmode ? (
 							<DarkModeOutlinedIcon fontSize="large" />
+						) : (
+							<LightModeOutlinedIcon fontSize="large" />
 						)}
 					</p>
 				</div>

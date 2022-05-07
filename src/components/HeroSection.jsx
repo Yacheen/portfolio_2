@@ -14,7 +14,6 @@ export const HeroSection = () => {
 						<br /> <br />
 						Nice to meet you!
 					</p>
-					<p></p>
 				</div>
 
 				<div className="hero-yassincodes-project">
