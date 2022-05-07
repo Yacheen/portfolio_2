@@ -8,13 +8,19 @@ import ffxivfriendslistimage from "../assets/images/ffxivfriendslist.png";
 import riotblizzportfolio from "../assets/images/riotblizzportfolio.png";
 import pexelsphotoviewer from "../assets/images/pexelsphotoviewer.png";
 export const ProjectsSection = () => {
+	//begin probably stupid and non-react way
+	//of giving everything a specific class name
+	//and giving them all a different template area
+
+	const projectList = document.querySelector('.projects-list');
+
 	return (
 		<div className="projects">
 			<div className="projects-content">
 				<h2 id="Projects">Projects</h2>
 				<div className="projects-list">
-					<div className="projects-row">
 						<Project
+							
 							projectLink={
 								"https://www.audiophile.yassinweb.dev/"
 							}
@@ -64,8 +70,6 @@ export const ProjectsSection = () => {
 							}
 							color={"bubblegum-blue"}
 						/>
-					</div>
-					<div className="projects-row">
 						<Project
 							name={
 								<>
@@ -118,8 +122,6 @@ export const ProjectsSection = () => {
 							}
 							color={"bubblegum-green"}
 						/>
-					</div>
-					<div className="projects-row">
 						<Project
 							name={
 								<>
@@ -138,7 +140,6 @@ export const ProjectsSection = () => {
 							}
 							color={"bubblegum-yellow"}
 						/>
-					</div>
 				</div>
 			</div>
 		</div>

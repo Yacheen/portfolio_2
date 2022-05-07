@@ -181,16 +181,10 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 
 		.projects-list {
 			display: flex;
-			flex-direction: column;
-			.projects-row {
-				display: flex;
-				justify-content: space-between;
-				margin-bottom: 4rem;
-			}
-			.projects-row:nth-child(3) {
-				justify-content: center;
-			}
+			justify-content: center;
+			flex-wrap: wrap;
 		}
+		
 	}
 }
 
@@ -262,6 +256,7 @@ $bubblegum-white: hsla(0, 0%, 90%, 1);
 	height: 50rem;
 	border-radius: 0.8rem;
 	color: hsl(0, 0%, 10%);
+	flex: 0 0 33.3%;
 	.project-content {
 		max-width: 90%;
 		height: 100%;
