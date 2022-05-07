@@ -15,20 +15,16 @@ $bubblegum-purple-highlighted: hsl(320, 100%, 59%);
 $bubblegum-yellow-highlighted: hsl(63, 100%, 59%);
 
 //darkmode & lightmode themes
+//darkmode
 $darkmode-text: hsl(0, 0%, 90%);
-$lightmode-text: hsl(0, 0%, 10%);
-
 $darkmode-background: hsl(0, 0%, 10%);
+$darkmode-shadow: 0 6px 16px 0 rgba(243, 243, 243, 0.2);
+
+//lightmode
 $lightmode-background: hsl(0, 0%, 100%);
+$lightmode-text: hsl(0, 0%, 10%);
+$lightmode-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
 
-//globals / defaults
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Roboto";
-}
 html {
 	transition: all ease-in 0.3s;
 	//set globals
@@ -44,13 +40,34 @@ html[data-theme="dark"] {
 	color: $darkmode-text;
 }
 
+.shadow {
+	box-shadow: $lightmode-shadow;
+	&:hover {
+		box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3);
+	}
+}
+[data-theme="dark"] {
+	.shadow {
+		box-shadow: $darkmode-shadow;
+		&:hover {
+			box-shadow: 0 8px 12px 0 rgba(243, 243, 243, 0.3);
+		}
+	}
+}
+
+//globals/defaults/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto";
+}
+
 a {
 	color: unset;
 	text-decoration: none;
 }
-// body {
-// 	background: hsl(0, 0%, 10%);
-// }
 
 //mixins
 @mixin project-button {
@@ -61,7 +78,6 @@ a {
 	transition: all ease 0.2s;
 	border: none;
 	border-radius: 4px;
-	box-shadow: 0 8px 16px 0 rgba(243, 243, 243, 0.2);
 }
 
 //styling done top to bottom
@@ -140,16 +156,17 @@ a {
 				h3 {
 					font-size: 2rem;
 					margin-bottom: 2rem;
-					font-weight: 400;
+					font-weight: 700;
 				}
 				button {
 					@include project-button;
 					width: 16rem;
 					height: 4.8rem;
 					font-size: 2.4rem;
-					background: $bubblegum-blue;
+					background: hsl(209, 91%, 47%);
+					color: hsl(0, 0%, 100%);
 					&:hover {
-						background: $bubblegum-blue-highlighted;
+						background: hsl(209, 91%, 57%);
 					}
 				}
 			}
@@ -294,6 +311,11 @@ a {
 				color: hsl(0, 0%, 90%);
 				&:hover {
 					background: hsl(0, 0%, 20%);
+				}
+
+				box-shadow: $lightmode-shadow;
+				&:hover {
+					box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.5);
 				}
 			}
 		}

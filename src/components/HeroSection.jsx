@@ -19,7 +19,9 @@ export const HeroSection = () => {
 				<div className="hero-yassincodes-project">
 					<div className="hero-yassincodes-description">
 						<h3>Custom chatroom authenticated via Twitch oAuth</h3>
-						<button type="button">Learn more</button>
+						<button data-theme className="shadow">
+							Learn more
+						</button>
 					</div>
 					<div className="hero-yassincodes-gif">
 						<img src={yassincodesgif} alt="" />

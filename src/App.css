@@ -1,11 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Roboto";
-}
-
 html {
   -webkit-transition: all ease-in 0.3s;
   transition: all ease-in 0.3s;
@@ -18,6 +10,34 @@ html {
 html[data-theme="dark"] {
   background: #1a1a1a;
   color: #e6e6e6;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.shadow:hover {
+  -webkit-box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .shadow {
+  -webkit-box-shadow: 0 6px 16px 0 rgba(243, 243, 243, 0.2);
+          box-shadow: 0 6px 16px 0 rgba(243, 243, 243, 0.2);
+}
+
+[data-theme="dark"] .shadow:hover {
+  -webkit-box-shadow: 0 8px 12px 0 rgba(243, 243, 243, 0.3);
+          box-shadow: 0 8px 12px 0 rgba(243, 243, 243, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
 }
 
 a {
@@ -142,7 +162,7 @@ a {
 .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-description h3 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-description button {
@@ -154,16 +174,15 @@ a {
   transition: all ease 0.2s;
   border: none;
   border-radius: 4px;
-  -webkit-box-shadow: 0 8px 16px 0 rgba(243, 243, 243, 0.2);
-          box-shadow: 0 8px 16px 0 rgba(243, 243, 243, 0.2);
   width: 16rem;
   height: 4.8rem;
   font-size: 2.4rem;
-  background: #61efff;
+  background: #0b7be5;
+  color: white;
 }
 
 .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-description button:hover {
-  background: #2eeaff;
+  background: #2e95f5;
 }
 
 .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-gif {
@@ -322,13 +341,18 @@ a {
   transition: all ease 0.2s;
   border: none;
   border-radius: 4px;
-  -webkit-box-shadow: 0 8px 16px 0 rgba(243, 243, 243, 0.2);
-          box-shadow: 0 8px 16px 0 rgba(243, 243, 243, 0.2);
   background: #1a1a1a;
   color: #e6e6e6;
+  -webkit-box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .project .project-content .project-buttons button:hover {
   background: #333333;
+}
+
+.project .project-content .project-buttons button:hover {
+  -webkit-box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=App.css.map */
