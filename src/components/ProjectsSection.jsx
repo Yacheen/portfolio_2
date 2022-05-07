@@ -7,6 +7,7 @@ import blogrlandingpage from "../assets/images/blogrlandingpage.jpg";
 import ffxivfriendslistimage from "../assets/images/ffxivfriendslist.png";
 import riotblizzportfolio from "../assets/images/riotblizzportfolio.png";
 import pexelsphotoviewer from "../assets/images/pexelsphotoviewer.png";
+
 export const ProjectsSection = () => {
 	return (
 		<div className="projects">
@@ -105,6 +106,12 @@ export const ProjectsSection = () => {
 						codeLink={"https://github.com/Yacheen/Brads-Portfolio"}
 						color={"bubblegum-green"}
 					/>
+				</div>
+				{/*manually edit the last project*/}
+				<div
+					style={{ display: "flex", justifyContent: "center" }}
+					className="pexels-project"
+				>
 					<Project
 						name={
 							<>

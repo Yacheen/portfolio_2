@@ -45,8 +45,43 @@ a {
   text-decoration: none;
 }
 
+.icon {
+  min-height: 3.2rem;
+  min-width: 3.2rem;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2e95f5;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.hover-underline-animation:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
 .navbar {
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 
 .navbar .navbar-content {
@@ -65,7 +100,12 @@ a {
 }
 
 .navbar .navbar-content h2 {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .navbar .navbar-content .light-switch {
@@ -89,18 +129,17 @@ a {
 }
 
 .navbar .navbar-content .nav-links li {
-  font-size: 1.8rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 2.2rem;
   font-weight: bold;
   padding: 0.8rem;
 }
 
-.navbar .navbar-content .nav-links li:hover {
-  text-decoration: underline;
-  color: #4d4d4d;
-}
-
 .hero-section {
-  margin-bottom: 12rem;
+  margin-bottom: 8rem;
 }
 
 .hero-section .hero-section-content {
@@ -174,6 +213,10 @@ a {
   transition: all ease 0.2s;
   border: none;
   border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 16rem;
   height: 4.8rem;
   font-size: 2.4rem;
@@ -213,7 +256,6 @@ a {
 .projects .projects-content h2 {
   font-size: 4rem;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .projects .projects-content .projects-list {
@@ -281,7 +323,7 @@ a {
   max-width: 30rem;
   height: 50rem;
   border-radius: 0.8rem;
-  margin: 28px auto;
+  margin: 28px 0;
   color: #1a1a1a;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.3%;
@@ -341,6 +383,10 @@ a {
   transition: all ease 0.2s;
   border: none;
   border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background: #1a1a1a;
   color: #e6e6e6;
   -webkit-box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);

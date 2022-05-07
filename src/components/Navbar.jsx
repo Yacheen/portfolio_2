@@ -23,27 +23,29 @@ export const Navbar = () => {
 	return (
 		<div className="navbar">
 			<div className="navbar-content">
-				<h2 id="#About">Portfolio</h2>
 				<div className="light-switch">
+					<p>
+						{darkmode ? (
+							<DarkModeOutlinedIcon className="icon" />
+						) : (
+							<LightModeOutlinedIcon className="icon" />
+						)}
+					</p>
 					<Switch
+						size="medium"
 						defaultChecked={darkmode ? true : false}
 						onClick={() => setDarkmode(!darkmode)}
 						color="warning"
 					/>
-					<p>
-						{darkmode ? (
-							<DarkModeOutlinedIcon fontSize="large" />
-						) : (
-							<LightModeOutlinedIcon fontSize="large" />
-						)}
-					</p>
 				</div>
+				<h2 id="#About">Portfolio</h2>
+
 				<ul className="nav-links">
 					<a href="#Projects">
-						<li className="link">Projects</li>
+						<li className="hover-underline-animation">Projects</li>
 					</a>
 					<a href="#Contact">
-						<li className="link">Contact</li>
+						<li className="hover-underline-animation">Contact</li>
 					</a>
 				</ul>
 			</div>
