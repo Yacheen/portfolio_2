@@ -11,18 +11,17 @@ export const HeroSection = () => {
 					<p>
 						I enjoy creating mobile-responsive solutions, providing
 						great user experiences
+						<br /> <br />
+						Nice to meet you!
 					</p>
-					<p>Nice to meet you!</p>
+					<p></p>
 				</div>
 
 				<div className="hero-yassincodes-project">
 					<div className="hero-yassincodes-description">
+						<h3>Custom chatroom authenticated via Twitch oAuth</h3>
 						<button type="button">Learn more</button>
-						<h3>
-							Custom Twitch chat authenticated via Twitch oAuth
-						</h3>
 					</div>
-
 					<div className="hero-yassincodes-gif">
 						<img src={yassincodesgif} alt="" />
 					</div>
