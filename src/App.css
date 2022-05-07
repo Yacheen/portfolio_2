@@ -212,6 +212,12 @@ body {
   margin-bottom: 4rem;
 }
 
+.projects .projects-content .projects-list .projects-row:nth-child(3) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .bubblegum-pink {
   background: -webkit-gradient(linear, left top, right bottom, from(#ff7abd), to(rgba(230, 230, 230, 0.9)));
   background: linear-gradient(to right bottom, #ff7abd, rgba(230, 230, 230, 0.9));
@@ -247,9 +253,23 @@ body {
           backdrop-filter: blur(20rem);
 }
 
+.bubblegum-yellow {
+  background: -webkit-gradient(linear, left top, right bottom, from(#f7ff61), to(rgba(230, 230, 230, 0.9)));
+  background: linear-gradient(to right bottom, #f7ff61, rgba(230, 230, 230, 0.9));
+  -webkit-backdrop-filter: blur(20rem);
+          backdrop-filter: blur(20rem);
+}
+
+.bubblegum-darkBlue {
+  background: -webkit-gradient(linear, left top, right bottom, from(#3f6bd9), to(rgba(230, 230, 230, 0.9)));
+  background: linear-gradient(to right bottom, #3f6bd9, rgba(230, 230, 230, 0.9));
+  -webkit-backdrop-filter: blur(20rem);
+          backdrop-filter: blur(20rem);
+}
+
 .project {
-  width: 32rem;
-  height: 52rem;
+  width: 30rem;
+  height: 50rem;
   border-radius: 0.8rem;
   color: #1a1a1a;
 }

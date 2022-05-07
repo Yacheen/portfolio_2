@@ -5,6 +5,8 @@ import yassincodesimage from "../assets/images/yassincodes1.jpg";
 import fylolandingpage from "../assets/images/fylolandingpageimage.webp";
 import blogrlandingpage from "../assets/images/blogrlandingpage.jpg";
 import ffxivfriendslistimage from "../assets/images/ffxivfriendslist.png";
+import riotblizzportfolio from "../assets/images/riotblizzportfolio.png";
+import pexelsphotoviewer from "../assets/images/pexelsphotoviewer.png";
 export const ProjectsSection = () => {
 	return (
 		<div className="projects">
@@ -24,12 +26,12 @@ export const ProjectsSection = () => {
 							}
 							image={audiophileecommerce}
 							name={"Ecommerce website"}
-							color={"bubblegum-pink"}
+							color={"bubblegum-orange"}
 						/>
 						<Project
 							projectLink={"https://yassincodes.com/"}
 							description={
-								"Developed a real-time Twitch-like chat application authenticated via oAuth, with in-depth roles & interactions such as moderator, emotes, banning, seeing eachother's profiles, and more. \n Developed backend skills involving Nodejs, Mongodb, Redis, websockets, and more."
+								"Developed a real-time Twitch-like chat application authenticated via oAuth, with in-depth roles & interactions such as moderator, emotes, banning, viewing eachother's profiles, and more. \n Learned backend skills involving Nodejs, Mongodb, websockets, middleware, Redis, and deployment"
 							}
 							image={yassincodesimage}
 							name={
@@ -39,7 +41,7 @@ export const ProjectsSection = () => {
 									chat app
 								</>
 							}
-							color={"bubblegum-green"}
+							color={"bubblegum-darkBlue"}
 							codeLink={false}
 						/>
 						<Project
@@ -82,17 +84,13 @@ export const ProjectsSection = () => {
 							codeLink={
 								"https://github.com/Yacheen/Blogr-landing-page"
 							}
-							color={"bubblegum-orange"}
+							color={"bubblegum-pink"}
 						/>
 						<Project
-							name={
-								<>
-									<p>FFXIV Friendslist</p>
-								</>
-							}
+							name={<>FFXIV Friendslist</>}
 							image={ffxivfriendslistimage}
 							description={
-								"Using the FFXIV API, created a website to view my raid group's characters stats in a game - strengthening React and state management/rendering technical skills"
+								"Using the FFXIV API, created a website to view my raid group's characters stats in a game - strengthening React frontend fundamentals"
 							}
 							projectLink={
 								"https://ffxiv-friendslist.yassinweb.dev/"
@@ -102,10 +100,44 @@ export const ProjectsSection = () => {
 							}
 							color={"bubblegum-hotPink"}
 						/>
-						<Project />
+						<Project
+							name={
+								<>
+									Riot Blizz's
+									<br />
+									Portfolio
+								</>
+							}
+							image={riotblizzportfolio}
+							description={
+								"Comissioned from a Riot Games employee to create a portfolio with a contact form & animated timelines"
+							}
+							projectLink={"https://www.blizz.lol/"}
+							codeLink={
+								"https://github.com/Yacheen/Brads-Portfolio"
+							}
+							color={"bubblegum-green"}
+						/>
 					</div>
 					<div className="projects-row">
-						<Project />
+						<Project
+							name={
+								<>
+									Pexels
+									<br />
+									photo viewer
+								</>
+							}
+							image={pexelsphotoviewer}
+							description={
+								"Using the Pexels API, search for only curated, high quality photography of any subject of your choosing"
+							}
+							projectLink={"https://photo-viewer.yassinweb.dev/"}
+							codeLink={
+								"https://github.com/Yacheen/PexelsAPI-photo-viewer"
+							}
+							color={"bubblegum-yellow"}
+						/>
 					</div>
 				</div>
 			</div>
