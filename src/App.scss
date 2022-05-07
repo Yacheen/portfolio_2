@@ -30,6 +30,7 @@ $lightmode-background: hsl(0, 0%, 100%);
 	font-family: "Roboto";
 }
 html {
+	transition: all ease-in 0.3s;
 	//set globals
 	font-size: 62.5%;
 	scroll-behavior: smooth;
