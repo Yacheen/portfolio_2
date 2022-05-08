@@ -89,7 +89,7 @@ a {
 }
 
 .navbar .navbar-content {
-  max-width: 60%;
+  max-width: 65%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,7 +174,7 @@ a {
 }
 
 .hero-section .hero-section-content {
-  max-width: 60%;
+  max-width: 65%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,8 +188,8 @@ a {
 }
 
 .hero-section .hero-section-content .hero-about h1 {
-  white-space: nowrap;
-  font-size: 6rem;
+  font-size: 5.6rem;
+  line-height: 5.2rem;
 }
 
 .hero-section .hero-section-content .hero-about h2 {
@@ -200,7 +200,7 @@ a {
 
 .hero-section .hero-section-content .hero-about p {
   font-size: 2.6rem;
-  max-width: 60%;
+  max-width: 65%;
   font-weight: 400;
 }
 
@@ -232,8 +232,8 @@ a {
 
 .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-description h3 {
   font-size: 2rem;
-  margin-bottom: 2rem;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-description button {
@@ -274,7 +274,7 @@ a {
 }
 
 .projects {
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 
 .projects .projects-content {
@@ -285,8 +285,8 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 60%;
-  margin: 0 auto;
+  max-width: 65%;
+  margin: 0px auto;
 }
 
 .projects .projects-content h2 {
@@ -355,9 +355,8 @@ a {
 }
 
 .project {
-  min-width: 30rem;
+  min-width: 32rem;
   max-width: 30rem;
-  height: 50rem;
   border-radius: 0.8rem;
   margin: 28px 0;
   color: #1a1a1a;
@@ -367,8 +366,8 @@ a {
 }
 
 .project .project-content {
+  min-height: 50rem;
   max-width: 90%;
-  height: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,28 +438,24 @@ a {
 }
 
 .contact {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 
 .contact h2 {
   text-align: center;
   font-size: 4rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 2rem;
 }
 
 .contact .contact-content {
-  max-width: 60%;
+  max-width: 65%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -468,16 +463,21 @@ a {
 
 .contact .contact-content .contact-invitation {
   font-size: 2.4rem;
-  width: 40%;
   margin: 0 auto 4rem auto;
+  width: 30%;
 }
 
 .contact .contact-content .contact-form {
-  min-height: 32rem;
-  min-width: 35.2rem;
+  width: 50%;
 }
 
 .contact .contact-content .contact-form .form-content {
+  border: 1px solid #666666;
+  background: rgba(26, 26, 26, 0.1);
+  padding: 12px;
+  min-height: 32rem;
+  min-width: 35.2rem;
+  max-width: 35.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,10 +546,10 @@ a {
 }
 
 .footer .footer-content {
-  max-width: 60%;
+  max-width: 65%;
   margin: 0 auto;
   padding: 24px 0;
-  min-height: 20vh;
+  min-height: 16vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -655,5 +655,159 @@ a {
   text-align: center;
   height: 100%;
   font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1112px) {
+  .navbar {
+    margin-bottom: 4rem;
+  }
+  .hero-section {
+    margin-bottom: 4rem;
+  }
+  .hero-section .hero-section-content .hero-about h1 {
+    font-size: 4.6rem;
+  }
+  .hero-section .hero-section-content .hero-about h2 {
+    font-size: 3.2rem;
+  }
+  .hero-section .hero-section-content .hero-about p {
+    font-size: 2.2rem;
+  }
+  .hero-section .hero-section-content .hero-yassincodes-project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-description {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin-bottom: 0.4rem;
+    max-width: unset;
+  }
+  .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-description h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-description button {
+    width: 9.2rem;
+    height: 2.8rem;
+    font-size: 1.4rem;
+  }
+  .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-gif {
+    margin-left: 0;
+  }
+  .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-gif img {
+    max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 1008px) {
+  .navbar .navbar-content {
+    max-width: 80%;
+  }
+  .navbar .navbar-content h2 {
+    font-size: 3.2rem;
+  }
+  .navbar .navbar-content .nav-links {
+    min-width: 14rem;
+  }
+  .navbar .navbar-content .nav-links li {
+    font-size: 1.8rem;
+  }
+  .hero-section .hero-section-content {
+    max-width: 80%;
+  }
+  .projects .projects-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .projects .projects-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 80%;
+  }
+  .projects .projects-content .projects-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+  }
+  .contact .contact-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 90%;
+  }
+  .contact .contact-content .contact-invitation {
+    width: 90%;
+    text-align: center;
+  }
+  .contact .contact-content .contact-form {
+    width: 80%;
+  }
+  .contact .contact-content .contact-form .form-content {
+    min-height: 28rem;
+    max-width: unset;
+    min-width: unset;
+  }
+  .footer .footer-content .footer-links h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 624px) {
+  .hero-section .hero-section-content .hero-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .navbar .navbar-content {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contact .contact-content .contact-form {
+    width: 100%;
+  }
+  .contact .contact-content .contact-form .form-content {
+    min-height: 28rem;
+    max-width: unset;
+    min-width: unset;
+  }
 }
 /*# sourceMappingURL=App.css.map */

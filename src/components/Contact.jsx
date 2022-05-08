@@ -6,8 +6,11 @@ export const Contact = () => {
 			<h2 id="Contact">Contact</h2>
 			<div className="contact-content">
 				<div className="contact-invitation">
-					If interested, send an email and I will get back to you as
-					soon as possible.
+					All messages are sent directly to my business email, and I
+					will try and get back with you as soon as possible -
+					<br />
+					<br />
+					Thank you
 				</div>
 
 				<div className="contact-form" data-theme>

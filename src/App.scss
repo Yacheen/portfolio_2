@@ -123,7 +123,7 @@ a {
 .navbar {
 	margin-bottom: 8rem;
 	.navbar-content {
-		max-width: 60%;
+		max-width: 65%;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
@@ -177,15 +177,15 @@ a {
 .hero-section {
 	margin-bottom: 8rem;
 	.hero-section-content {
-		max-width: 60%;
+		max-width: 65%;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		.hero-about {
 			h1 {
-				white-space: nowrap;
-				font-size: 6rem;
+				font-size: 5.6rem;
+				line-height: 5.2rem;
 			}
 			h2 {
 				font-size: 3.8rem;
@@ -194,7 +194,7 @@ a {
 			}
 			p {
 				font-size: 2.6rem;
-				max-width: 60%;
+				max-width: 65%;
 				font-weight: 400;
 			}
 		}
@@ -210,8 +210,8 @@ a {
 				max-width: 16rem;
 				h3 {
 					font-size: 2rem;
-					margin-bottom: 2rem;
 					font-weight: 700;
+					margin-bottom: 8px;
 				}
 				button {
 					@include project-button;
@@ -241,12 +241,12 @@ a {
 
 //projects
 .projects {
-	margin-bottom: 4rem;
+	margin-bottom: 8rem;
 	.projects-content {
 		display: flex;
 		flex-direction: column;
-		max-width: 60%;
-		margin: 0 auto;
+		max-width: 65%;
+		margin: 0px auto;
 		h2 {
 			font-size: 4rem;
 			text-align: center;
@@ -325,16 +325,15 @@ a {
 }
 .project {
 	//some inline css done for last project cause styling tings
-	min-width: 30rem;
+	min-width: 32rem;
 	max-width: 30rem;
-	height: 50rem;
 	border-radius: 0.8rem;
 	margin: 28px 0;
 	color: hsl(0, 0%, 10%);
 	flex: 0 0 33.3%;
 	.project-content {
+		min-height: 50rem;
 		max-width: 90%;
-		height: 100%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
@@ -379,28 +378,33 @@ a {
 
 //contact
 .contact {
-	margin-bottom: 8rem;
+	margin-bottom: 4rem;
+
 	h2 {
 		text-align: center;
 		font-size: 4rem;
-		margin-bottom: 0.8rem;
+		margin-bottom: 2rem;
 	}
 	.contact-content {
-		max-width: 60%;
+		max-width: 65%;
 		margin: 0 auto;
 		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
+		justify-content: center;
 		align-items: center;
 		.contact-invitation {
 			font-size: 2.4rem;
-			width: 40%;
 			margin: 0 auto 4rem auto;
+			width: 30%;
 		}
 		.contact-form {
-			min-height: 32rem;
-			min-width: 35.2rem;
+			width: 50%;
 			.form-content {
+				border: 1px solid hsla(0, 0%, 40%, 1);
+				background: hsla(0, 0%, 10%, 0.1);
+				padding: 12px;
+				min-height: 32rem;
+				min-width: 35.2rem;
+				max-width: 35.2rem;
 				display: flex;
 				flex-direction: column;
 				p {
@@ -451,10 +455,10 @@ a {
 		h2 {
 			font-size: 3.2rem;
 		}
-		max-width: 60%;
+		max-width: 65%;
 		margin: 0 auto;
 		padding: 24px 0;
-		min-height: 20vh;
+		min-height: 16vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -515,6 +519,166 @@ a {
 			text-align: center;
 			height: 100%;
 			font-size: 1.6rem;
+		}
+	}
+}
+
+//------------------------------------------------------------------//
+//------------------------media queries-----------------------------//
+//------------------------------------------------------------------//
+@media screen and (max-width: 1112px) {
+	.navbar {
+		margin-bottom: 4rem;
+	}
+
+	.hero-section {
+		margin-bottom: 4rem;
+		.hero-section-content {
+			.hero-about {
+				h1 {
+					font-size: 4.6rem;
+				}
+				h2 {
+					font-size: 3.2rem;
+				}
+				p {
+					font-size: 2.2rem;
+				}
+			}
+
+			.hero-yassincodes-project {
+				flex-direction: column;
+				align-items: flex-end;
+				.hero-yassincodes-description {
+					flex-direction: row;
+					align-items: flex-end;
+					justify-content: start;
+					margin-bottom: 0.4rem;
+					max-width: unset;
+					h3 {
+						font-size: 1.2rem;
+						margin-bottom: 0;
+					}
+					button {
+						width: 9.2rem;
+						height: 2.8rem;
+						font-size: 1.4rem;
+					}
+				}
+
+				.hero-yassincodes-gif {
+					margin-left: 0;
+					img {
+						max-height: 300px;
+					}
+				}
+			}
+		}
+	}
+}
+//set projects to be centered after 910px
+@media screen and (max-width: 1008px) {
+	.navbar {
+		.navbar-content {
+			max-width: 80%;
+			h2 {
+				font-size: 3.2rem;
+			}
+
+			.nav-links {
+				min-width: 14rem;
+				li {
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+	.hero-section {
+		.hero-section-content {
+			max-width: 80%;
+		}
+	}
+	.projects {
+		.projects-content {
+			align-items: center;
+			max-width: 80%;
+		}
+	}
+}
+
+//mobile
+
+@media screen and(max-width: 860px) {
+	.projects {
+		.projects-content {
+			align-items: center;
+			max-width: 80%;
+			.projects-list {
+				flex-direction: column;
+				flex-wrap: unset;
+			}
+		}
+	}
+
+	.contact {
+		.contact-content {
+			flex-direction: column;
+			align-items: center;
+			max-width: 90%;
+			.contact-invitation {
+				width: 90%;
+				text-align: center;
+			}
+			.contact-form {
+				width: 80%;
+				.form-content {
+					min-height: 28rem;
+					max-width: unset;
+					min-width: unset;
+				}
+			}
+		}
+	}
+
+	.footer {
+		.footer-content {
+			.footer-links {
+				h2 {
+					font-size: 2.4rem;
+				}
+			}
+		}
+	}
+}
+//for hero section
+@media screen and (max-width: 624px) {
+	.hero-section {
+		.hero-section-content {
+			.hero-about {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				align-items: center;
+			}
+		}
+	}
+}
+@media screen and(max-width: 490px) {
+	.navbar {
+		.navbar-content {
+			justify-content: space-evenly;
+		}
+	}
+	.contact {
+		.contact-content {
+			.contact-form {
+				width: 100%;
+				.form-content {
+					min-height: 28rem;
+					max-width: unset;
+					min-width: unset;
+				}
+			}
 		}
 	}
 }

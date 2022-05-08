@@ -3,9 +3,11 @@ import Switch from "@mui/material/Switch";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import useLocalStorage from "../hooks/useLocalStorage";
+import { useMediaQuery } from "@mui/material";
 export const Navbar = () => {
 	//darkmode state with classes
 	const [darkmode, setDarkmode] = useLocalStorage("theme", false);
+	const isMobile = useMediaQuery("(max-width:490px)");
 	useEffect(() => {
 		switch (darkmode) {
 			case false:
@@ -39,15 +41,20 @@ export const Navbar = () => {
 					/>
 				</div>
 				<h2 id="Home">Portfolio</h2>
-
-				<ul className="nav-links">
-					<a href="#Projects">
-						<li className="hover-underline-animation">Projects</li>
-					</a>
-					<a href="#Contact">
-						<li className="hover-underline-animation">Contact</li>
-					</a>
-				</ul>
+				{isMobile ? null : (
+					<ul className="nav-links">
+						<a href="#Projects">
+							<li className="hover-underline-animation">
+								Projects
+							</li>
+						</a>
+						<a href="#Contact">
+							<li className="hover-underline-animation">
+								Contact
+							</li>
+						</a>
+					</ul>
+				)}
 			</div>
 		</div>
 	);
