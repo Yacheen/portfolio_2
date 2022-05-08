@@ -392,6 +392,7 @@ a {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: row-reverse;
 		.contact-invitation {
 			font-size: 2.4rem;
 			margin: 0 auto 4rem auto;
