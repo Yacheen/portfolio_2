@@ -269,7 +269,7 @@ a {
   border-radius: 8px;
 }
 
-.hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-gif img {
+.hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-gif video {
   max-height: 320px;
   border-radius: 8px;
 }
@@ -716,7 +716,7 @@ a {
   .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-gif {
     margin-left: 0;
   }
-  .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-gif img {
+  .hero-section .hero-section-content .hero-yassincodes-project .hero-yassincodes-gif video {
     max-height: 300px;
   }
 }

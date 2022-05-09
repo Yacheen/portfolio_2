@@ -1,5 +1,5 @@
 import React from "react";
-import yassincodesgif from "../assets/yassincodeschatgif2.gif";
+import yassincodesgif from "../assets/yassincodeschatgif.webm";
 import { useMediaQuery } from "@mui/material";
 
 export const HeroSection = () => {
@@ -34,7 +34,12 @@ export const HeroSection = () => {
 							</a>
 						</div>
 						<div className="hero-yassincodes-gif">
-							<img src={yassincodesgif} alt="" />
+							<video autoPlay loop={true} muted={true}>
+								<source
+									src={yassincodesgif}
+									type="video/webm"
+								/>
+							</video>
 						</div>
 					</div>
 				)}
