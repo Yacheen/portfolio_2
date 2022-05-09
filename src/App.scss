@@ -247,7 +247,7 @@ a {
 		display: flex;
 		flex-direction: column;
 		max-width: 65%;
-		margin: 0px auto;
+		margin: 0 auto;
 		h2 {
 			font-size: 4rem;
 			text-align: center;
@@ -255,7 +255,7 @@ a {
 
 		.projects-list {
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-evenly;
 			flex-wrap: wrap;
 		}
 	}
@@ -329,12 +329,12 @@ a {
 	min-width: 32rem;
 	max-width: 30rem;
 	border-radius: 0.8rem;
-	margin: 28px 0;
+	margin: 28px 28px;
 	color: hsl(0, 0%, 10%);
 	flex: 0 0 33.3%;
 	.project-content {
 		min-height: 50rem;
-		max-width: 90%;
+		max-width: 80%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
@@ -390,16 +390,16 @@ a {
 		max-width: 65%;
 		margin: 0 auto;
 		display: flex;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
 		flex-direction: row-reverse;
 		.contact-invitation {
 			font-size: 2.4rem;
-			margin: 0 auto 4rem auto;
-			width: 30%;
+			min-width: 34rem;
+			max-width: 34rem;
 		}
 		.contact-form {
-			width: 50%;
+			margin-right: 2rem;
 			.form-content {
 				border: 1px solid hsla(0, 0%, 40%, 1);
 				background: hsla(0, 0%, 10%, 0.1);

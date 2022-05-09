@@ -29,7 +29,7 @@ export const ProjectsSection = () => {
 					<Project
 						projectLink={"https://yassincodes.com/"}
 						description={
-							"Real-time chat application to better the experience for my livestream, with in-depth roles & interactions such as moderator, emotes, banning, viewing eachother's profiles, and more. \n Learned backend skills involving Nodejs, Mongodb, websockets, middleware, and Redis cache."
+							"Real-time chat application with oAuth, including permissions such as moderator, & features like emotes/emojis, banning, viewing eachother's profiles, and more. \n Learned backend skills involving Nodejs, Mongodb, websockets, middleware, and Redis cache."
 						}
 						image={yassincodesimage}
 						name={
@@ -106,12 +106,7 @@ export const ProjectsSection = () => {
 						codeLink={"https://github.com/Yacheen/Brads-Portfolio"}
 						color={"bubblegum-green"}
 					/>
-				</div>
-				{/*manually edit the last project*/}
-				<div
-					style={{ display: "flex", justifyContent: "center" }}
-					className="pexels-project"
-				>
+
 					<Project
 						name={
 							<>
@@ -131,6 +126,7 @@ export const ProjectsSection = () => {
 						color={"bubblegum-yellow"}
 					/>
 				</div>
+				{/*manually edit the last project*/}
 			</div>
 		</div>
 	);
