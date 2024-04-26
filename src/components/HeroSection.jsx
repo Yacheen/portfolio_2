@@ -9,9 +9,9 @@ export const HeroSection = () => {
 			<div className="hero-section-content">
 				<div className="hero-about">
 					<h1>Yassin Moussaoui</h1>
-					<h2>Software Engineer</h2>
+					<h2>Software Developer</h2>
 					<p>
-						I enjoy creating mobile-responsive solutions, providing
+						Creating mobile-responsive solutions, providing
 						great user experiences
 						<br /> <br />
 						Nice to meet you!
